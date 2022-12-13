@@ -37,7 +37,31 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/firebase'
   ],
+
+  firebase: {
+    config: {
+      apiKey: 'AIzaSyC__Vsco_IudvJa1vHV1ACWWgWziOXykLU',
+      authDomain: 'neas-fashion.firebaseapp.com',
+      projectId: 'neas-fashion',
+      storageBucket: 'neas-fashion.appspot.com',
+      messagingSenderId: '122770813563',
+      appId: '1:122770813563:web:24ba8fb9acabeec1b628de',
+      measurementId: 'G-VRCW6DPK4W'
+    },
+    services: {
+      auth: false,
+      firestore: true,
+      functions: false,
+      storage: false,
+      database: false,
+      messaging: false,
+      performance: false,
+      analytics: false,
+      remoteConfig: false
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
