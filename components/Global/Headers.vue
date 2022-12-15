@@ -11,7 +11,7 @@
   width: 100%;
   padding: 40px 1rem;
   background: $light;
-  border-bottom: 1px solid $primary;
+  box-shadow: 0px 1px 1px $primary;
   text-align: center;
 
   h2 {
