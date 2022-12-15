@@ -2,7 +2,7 @@
   <div class="app">
     <Nav />
     <div class="body">
-      
+      <Nuxt keep-alive :keep-alive-props="{ max: 120 }" />
     </div>
   </div>
 </template>
