@@ -16,18 +16,16 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
-
-  // padding: 1rem;
+  margin: 2rem 3rem;
 
   display: flex;
-  justify-content: center;
-
+  justify-content: flex-start;
 
   #banner_image {
     max-width: 90%;
-    height: 600px;
-
-    margin: 1rem;
+    height: 450px;
+    object-fit: contain;
+    border-radius: $standard-r;
   }
 }
 </style>
