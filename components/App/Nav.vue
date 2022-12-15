@@ -1,6 +1,8 @@
 <template>
   <nav>
-    <NuxtLink class="logo" to="/">Neas Fashion</NuxtLink>
+    <NuxtLink class="logo" to="/">
+      <span>Neas</span> Fashion
+    </NuxtLink>
     <div class="contact">
       <span>Need help?</span>
       <span><a href="tel:+2348023456789">08023456789</a></span>
@@ -16,7 +18,7 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-  padding: 14px 16px;
+  padding: 14px 48px;
   position: fixed;
   top: 0;
 
@@ -24,11 +26,12 @@ nav {
   background: $light;
   width: 100%;
   height: 72px;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(2px);
 
   .logo {
@@ -39,7 +42,7 @@ nav {
       weight: 600;
     }
 
-    text-transform: uppercase;
+    text-transform: capitalize;
     color: $primary;
     cursor: pointer;
   }
@@ -48,6 +51,19 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    span a {
+      color: $primary;
+    }
+  }
+
+  @media screen and (max-width: $medium) {
+    padding: 12px 14px;
+    .logo {
+      font: {
+        weight: 500;
+      }
+    }
   }
 
 }
