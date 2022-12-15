@@ -19,45 +19,15 @@ export default {
   },
   data() {
     return {
-      categories: [
-        {
-          id: 'C0BeMn3u5Iko2hXQMEIq',
-          image: 'https://firebasestorage.googleapis.com/v0/b/neas-fashion.appspot.com/o/category_shoes_for_men.jpg?alt=media&token=14324eff-00ad-4c89-8dec-fe055cbd4739',
-          name: "Men's Shoes"
-        },
-        {
-          id: 'C0BeMn3u5Iko2hXQMdIq',
-          image: 'https://firebasestorage.googleapis.com/v0/b/neas-fashion.appspot.com/o/category_shoes_for_men.jpg?alt=media&token=14324eff-00ad-4c89-8dec-fe055cbd4739',
-          name: "Men's Shoes"
-        },
-        {
-          id: 'C0BeMn3u5Iko2hXQMEIf',
-          image: 'https://firebasestorage.googleapis.com/v0/b/neas-fashion.appspot.com/o/category_shoes_for_men.jpg?alt=media&token=14324eff-00ad-4c89-8dec-fe055cbd4739',
-          name: "Men's Shoes"
-        },
-        {
-          id: 'C0BeMn3u5Ikr2hXQMEIq',
-          image: 'https://firebasestorage.googleapis.com/v0/b/neas-fashion.appspot.com/o/category_shoes_for_men.jpg?alt=media&token=14324eff-00ad-4c89-8dec-fe055cbd4739',
-          name: "Men's Shoes"
-        },
-        {
-          id: 'C0BeMn3udIko2hXQMEIq',
-          image: 'https://firebasestorage.googleapis.com/v0/b/neas-fashion.appspot.com/o/category_shoes_for_men.jpg?alt=media&token=14324eff-00ad-4c89-8dec-fe055cbd4739',
-          name: "Men's Shoes"
-        },
-        {
-          id: 'C0BeMn3u5Ikw2hXQMEIq',
-          image: 'https://firebasestorage.googleapis.com/v0/b/neas-fashion.appspot.com/o/category_shoes_for_men.jpg?alt=media&token=14324eff-00ad-4c89-8dec-fe055cbd4739',
-          name: "Men's Shoes"
-        },
-        {
-          id: 'C0BdMn3u5Iko2hXQMEIq',
-          image: 'https://firebasestorage.googleapis.com/v0/b/neas-fashion.appspot.com/o/category_shoes_for_men.jpg?alt=media&token=14324eff-00ad-4c89-8dec-fe055cbd4739',
-          name: "Men's Shoes"
-        },
-
-      ]
+      categories: []
     }
+  },
+  async fetch() {
+    await this.$fire.firestore.collection('categories').get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        this.categories.push({id: doc.id, image: doc.data().image, name: doc.data().name})
+      })
+    })
   }
 }
 </script>
