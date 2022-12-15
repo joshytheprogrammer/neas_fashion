@@ -1,0 +1,53 @@
+// Color Pallete 
+$primary:  #001021;
+$secondary:  #D65108;
+$background: #DFE0E2;
+$light:  #FBFFfE;
+$dark:  #0A0903;
+
+$success: #00a711;
+$warning: #FB9E2D;
+$danger: #E00000;
+
+
+// Viewport Sizes
+$small: 425px;
+$s-medium: 528px;
+$medium: 768px;
+$m-large: 992px;
+$large: 1200px;
+$x-large: 1440px;
+$xx-large: 2560px;
+
+html,
+body  {
+  background: $background;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: $s-medium) {
+  canvas {
+    max-width: 100%;
+    max-height: 200px;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 4px;
+}
+
+  /* Track */
+::-webkit-scrollbar-track {
+  background: $light;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $dark;
+}
