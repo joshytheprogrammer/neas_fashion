@@ -39,7 +39,7 @@ export default {
 
 <style lang="scss" scoped>
 .hero {
-  margin: 1rem 3rem;
+  margin: 1rem 3rem 0 3rem;
 
   #banner_ad_image {
     width: 100%;

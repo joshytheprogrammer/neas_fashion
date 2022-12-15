@@ -20,10 +20,10 @@ export default {
 
 <style lang="scss" scoped>
 .trending {
-  margin-bottom: 2rem;
-  
+
+
   .categories {
-    padding: 2rem 12px;
+    margin: 1rem 3rem 0 3rem;
     display: flex;
 
     overflow: auto;
