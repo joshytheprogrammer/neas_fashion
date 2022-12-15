@@ -19,7 +19,6 @@ export default {
 <style lang="scss" scoped>
 nav {
   padding: 14px 48px;
-  position: fixed;
   top: 0;
 
   user-select: none;
