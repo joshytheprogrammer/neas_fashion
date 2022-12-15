@@ -23,7 +23,7 @@ export default {
     width: 225px;
     margin-right: 1rem;
     border-radius: $standard-r;
-    padding: 12px;
+    padding: 1rem;
 
     box-shadow: 0 1px 1px $primary;
 
