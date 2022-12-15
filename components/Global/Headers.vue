@@ -20,6 +20,8 @@
   }
 
   @media screen and (max-width: $medium) {
+    padding: 2rem 1rem;
+
     h2 {
       font-size: 28px;
     }

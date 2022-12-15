@@ -72,7 +72,7 @@ nav {
   }
 
   @media screen and (max-width: $small) {
-    padding: 12px 14px;
+
     .logo {
       font: {
         size: 24px;

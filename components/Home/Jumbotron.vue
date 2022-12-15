@@ -49,7 +49,7 @@ export default {
   }
 
   @media screen and (max-width: $medium) {
-    margin: 12px 14px;
+    margin: 12px 14px 0 14px;
   }
 }
 </style>
