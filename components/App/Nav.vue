@@ -72,7 +72,6 @@ nav {
   }
 
   @media screen and (max-width: $small) {
-
     .logo {
       font: {
         size: 24px;
