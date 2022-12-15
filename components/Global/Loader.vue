@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       styles: {
-        color: '#0A0908',
+        color: '#7B0D1E',
         size: '64px'
       }
     }

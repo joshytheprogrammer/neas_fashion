@@ -3,6 +3,8 @@
     <Headers>
       <template #title>Trending Categories</template>
     </Headers>
+    <Loader v-if="$fetchState.pending" type="clip" />
+    <NetworkError v-else-if="$fetchState.error || error" :message="error" />
     <div class="categories">
       <Card v-for="item in categories" :key="item.id" :item="item" />
     </div>
@@ -11,23 +13,31 @@
 
 <script>
 import Headers from "../Global/Headers.vue"
+import Loader from "../Global/Loader.vue"
+import NetworkError from "../Global/"
 import Card from "../Global/Cards/Category.vue"
 export default {
   components: {
     Headers,
-    Card
+    Card,
+    Loader
   },
   data() {
     return {
-      categories: []
+      categories: [],
+      error: ''
     }
   },
   async fetch() {
-    await this.$fire.firestore.collection('categories').get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        this.categories.push({id: doc.id, image: doc.data().image, name: doc.data().name})
+    try {
+      await this.$fire.firestore.collection('categories').get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          this.categories.push({id: doc.id, image: doc.data().image, name: doc.data().name})
+        })
       })
-    })
+    } catch (error) {
+      this.error = error.message
+    }
   }
 }
 </script>
