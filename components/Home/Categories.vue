@@ -1,5 +1,5 @@
 <template>
-  <div class="trending" id="categories">
+  <section class="trending" id="categories">
     <Headers>
       <template #title>Trending Categories</template>
     </Headers>
@@ -8,7 +8,7 @@
     <div v-else class="categories">
       <Card v-for="item in categories" :key="item.id" :item="item" />
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
