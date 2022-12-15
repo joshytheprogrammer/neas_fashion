@@ -1,5 +1,5 @@
 <template>
-  <div class="trending">
+  <div class="trending" id="categories">
     <Headers>
       <template #title>Trending Categories</template>
     </Headers>
