@@ -5,10 +5,33 @@
 </template>
 
 <script>
+import {mapGetters, mapActions} from "vuex"
 export default {
+  computed: {
+    ...mapGetters({
+      'isMobile': 'mobile/getDevice'
+    })
+  },
   data() {
     return {
-      bannerImage: 'https://firebasestorage.googleapis.com/v0/b/neas-fashion.appspot.com/o/Banner%2FNeas%20Fashion%20AD%20Banner%202.png?alt=media&token=43f146e7-45b4-4f19-a390-581f67ddc6a7'
+      bannerImage: ''
+    }
+  },
+  mounted() {
+    this.loadImage()
+  },
+  methods: {
+    ...mapActions({
+      checkWidth: 'mobile/checkWidth',
+    }),
+    loadImage() {
+      this.checkWidth()
+
+      let desktopImage = 'https://firebasestorage.googleapis.com/v0/b/neas-fashion.appspot.com/o/Banner%2FNeas%20Fashion%20AD%20Banner%202.png?alt=media&token=43f146e7-45b4-4f19-a390-581f67ddc6a7'
+
+      let mobileImage = 'https://firebasestorage.googleapis.com/v0/b/neas-fashion.appspot.com/o/Banner%2FNeas%20fashion%20banner%20ad.png?alt=media&token=2938c29e-c3ff-4283-a578-638c9a75bd02'
+
+      this.isMobile ? this.bannerImage = mobileImage : this.bannerImage = desktopImage
     }
   }
 }
