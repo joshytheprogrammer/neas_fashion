@@ -63,7 +63,9 @@ nav {
   @media screen and (max-width: $medium) {
     padding: 12px 14px;
     .logo {
+
       font: {
+        size: 28px;
         weight: 500;
       }
     }
