@@ -1,19 +1,17 @@
 <template>
   <div class="home">
     <Jumbotron />
-    <Headers>
-      <template #title>Popular Categories</template>
-    </Headers>
+    <Categories />
   </div>
 </template>
 
 <script>
 import Jumbotron from "../components/Home/Jumbotron.vue"
-import Headers from "../components/Global/Headers.vue"
+import Categories from "../components/Home/Categories.vue"
 export default {
   components: {
     Jumbotron,
-    Headers
+    Categories
   }
 }
 </script>
