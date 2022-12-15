@@ -29,7 +29,9 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/ngrok',
+    '@nuxtjs/dotenv',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -80,7 +82,7 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
-  
+
   styleResources: {
     scss: [
       '@/assets/scss/app.scss',
@@ -88,4 +90,9 @@ export default {
     ],
     hoistUseStatements:  true,
   },
+
+  ngrok: {
+    // module options
+    authtoken: process.env.NGROK_AUTHTOKEN
+  }
 }
