@@ -21,7 +21,6 @@ export default {
 <style lang="scss" scoped>
 .trending {
 
-
   .categories {
     margin: 1rem 3rem 0 3rem;
     display: flex;
