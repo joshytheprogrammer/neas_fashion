@@ -1,8 +1,10 @@
 <template>
   <nav>
-    <NuxtLink class="logo" to="/">
-      <span>Neas</span> Fashion
-    </NuxtLink>
+    <h2>
+      <NuxtLink class="logo" to="/">
+        <span>Neas</span> Fashion
+      </NuxtLink>
+    </h2>
     <div class="contact">
       <span>Need help?</span>
       <span><a href="tel:+2348023456789">08023456789</a></span>
@@ -33,17 +35,19 @@ nav {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(2px);
 
-  .logo {
-    text-decoration: none;
-
+  h2 {
     font: {
       size: 36px;
       weight: 600;
     }
 
     text-transform: capitalize;
-    color: $primary;
-    cursor: pointer;
+
+    .logo {
+      text-decoration: none;
+      cursor: pointer;
+      color: $primary;
+    }
   }
 
   .contact {
