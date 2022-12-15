@@ -45,7 +45,7 @@ export default {
     width: 100%;
     height: 300px;
     object-fit: fill;
-    border-radius: $none;
+    border-radius: $standard-r;
   }
 
   @media screen and (max-width: $medium) {
