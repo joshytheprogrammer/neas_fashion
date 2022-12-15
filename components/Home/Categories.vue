@@ -5,7 +5,7 @@
     </Headers>
     <Loader v-if="$fetchState.pending" type="clip" />
     <NetworkError v-else-if="$fetchState.error || error" :message="error" />
-    <div class="categories">
+    <div v-else class="categories">
       <Card v-for="item in categories" :key="item.id" :item="item" />
     </div>
   </div>
