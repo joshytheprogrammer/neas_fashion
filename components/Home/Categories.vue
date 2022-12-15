@@ -48,7 +48,7 @@ export default {
 .trending {
 
   .categories {
-    margin: 2rem 3rem;
+    margin: 2rem 3rem 0 3rem;
     display: flex;
 
     overflow: auto;

@@ -46,5 +46,35 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.recently {
 
+  .products {
+    margin: 2rem 3rem;
+
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    grid-template-columns: repeat(3,1fr);
+
+    @media screen and (max-width: $large) {
+      width: 100%;
+      margin: 0;
+      padding: 0.9rem;
+      grid-template-columns: repeat(4,1fr);
+    }
+
+    @media screen and (max-width: $m-large) {
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    @media screen and (max-width: $medium) {
+      margin: 2rem 1rem;
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    @media screen and (max-width: $s-medium) {
+      display: block;
+    }
+  }
+}
 </style>
