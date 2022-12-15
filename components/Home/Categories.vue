@@ -14,13 +14,15 @@
 <script>
 import Headers from "../Global/Headers.vue"
 import Loader from "../Global/Loader.vue"
-import NetworkError from "../Global/"
+import NetworkError from "../Global/Error.vue"
+
 import Card from "../Global/Cards/Category.vue"
 export default {
   components: {
     Headers,
+    Loader,
+    NetworkError,
     Card,
-    Loader
   },
   data() {
     return {
