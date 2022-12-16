@@ -7,7 +7,7 @@
     <NetworkError v-else-if="$fetchState.error || error" :message="error" />
     <div v-else class="products">
       <!-- <Card v-for="item in recently" :key="item.id" :item="item" /> -->
-      {{recently}}
+      <p v-for="item in recently" :key="item.id">{{item}}</p>
     </div>
   </section>
 </template>
@@ -33,7 +33,7 @@ export default {
   },
   async fetch() {
     try {
-      await this.$fire.firestore.collection('products').get().then((querySnapshot) => {
+      await this.$fire.firestore.collection('products').limit(12).get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           this.recently.push({id: doc.id, image: doc.data().image, name: doc.data().name, price: doc.data().price, slug: doc.data().slug})
         })
@@ -54,22 +54,11 @@ export default {
     display: grid;
     gap: 1rem;
     justify-items: center;
-    grid-template-columns: repeat(3,1fr);
-
-    @media screen and (max-width: $large) {
-      width: 100%;
-      margin: 0;
-      padding: 0.9rem;
-      grid-template-columns: repeat(4,1fr);
-    }
-
-    @media screen and (max-width: $m-large) {
-      grid-template-columns: repeat(3,1fr);
-    }
+    grid-template-columns: repeat(3, 1fr);
 
     @media screen and (max-width: $medium) {
       margin: 2rem 1rem;
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(2, 1fr);
     }
 
     @media screen and (max-width: $s-medium) {
