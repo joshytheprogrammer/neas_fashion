@@ -7,7 +7,6 @@
           <h1 class="n"> {{item.name}}. </h1>
           <p class="price" title="the price of the product">{{formatter(item.price)}}</p>
         </div>
-
       </div>
     </div>
   </div>
@@ -38,22 +37,23 @@ export default {
   flex-direction: column;
   align-items: center;
   padding: 2rem 0;
-  border: 1px solid $primary;
 
   ._item {
     background: $light;
     border-radius: 10px;
     width: fit-content;
     max-height: 640px;
-    color: $primary;
+    color: $dark;
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 1rem;
 
+    // border: 1px solid $dark;
+
     img {
       width: 100%;
       height: 100%;
-      max-height: 700px;
+      max-height: 400px;
       object-fit: contain;
       border-radius: 10px 0px 0px 10px;
       transition: 0.5s all ease-in-out;
@@ -72,7 +72,7 @@ export default {
         }
 
         .price {
-          background: $primary;
+          background: $dark;
           border-radius: 10px;
           border: 1px solid $primary;
           min-width: 150px;
@@ -108,16 +108,19 @@ export default {
       display: block;
 
       img {
-        max-height: 500px;
+        max-height: 400px;
         border-radius: 10px 10px 0px 0px;
       }
 
       .details .inherent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         .n {
           font-size: 24px;
         }
 
-        .p_r {
+        .price {
           font-size: 18px;
         }
       }
@@ -128,9 +131,11 @@ export default {
     min-width: 100%;
     max-width: 100%;
 
-    img {
-      max-height: 400px;
-      object-fit: contain;
+    ._item {
+      img {
+        max-height: 280px;
+        object-fit: contain;
+      }
     }
   }
 }
