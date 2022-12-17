@@ -1,6 +1,6 @@
 <template>
   <section class="hero">
-    <img loading="lazy" :src="bannerImage" alt="Neas Fashion Banner AD" id="banner_ad_image">
+    <img :src="bannerImage" alt="Neas Fashion Banner AD" id="banner_ad_image">
   </section>
 </template>
 
