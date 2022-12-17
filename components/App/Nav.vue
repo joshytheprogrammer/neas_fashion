@@ -20,12 +20,12 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-  padding: 14px 48px;
+  padding: 12px 48px;
   top: 0;
 
   user-select: none;
   background: $light;
-  width: 100%;
+  max-width: 100%;
   height: 72px;
 
   display: flex;
