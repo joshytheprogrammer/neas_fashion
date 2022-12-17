@@ -56,7 +56,7 @@ export default {
 
   @media screen and (max-width: $medium) {
     .categories {
-      margin: 2rem 1rem;
+      margin: 2rem 1rem 0 1rem;
     }
   }
 }
