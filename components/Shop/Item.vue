@@ -52,6 +52,7 @@ export default {
 
     margin: auto;
     width: fit-content;
+    max-width: 80%;
 
     max-height: 640px;
 
@@ -114,6 +115,7 @@ export default {
     padding: 1rem;
 
     ._item {
+      max-width: 100%;
       width: 100%;
       max-height: fit-content;
       display: block;
@@ -127,6 +129,8 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+        text-align: center;
+
         .n {
           font-size: 24px;
         }
