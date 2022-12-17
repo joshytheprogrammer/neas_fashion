@@ -41,7 +41,7 @@ export default {
         {
           hid: 'og:description',
           property: 'og:description',
-          content: this.product.name + " - you can purchase this product for " + this.product.price + " from this site or call us using product id - " + this.product.id
+          content: this.product.name + " - you can purchase this product for " + this.product.price + " from this site or reach out using product id - " + this.product.id
         },
         {
           hid: 'og:image',

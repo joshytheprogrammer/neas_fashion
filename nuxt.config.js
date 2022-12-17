@@ -8,8 +8,19 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' }
+      { hid: 'description', name: 'description', content: 'The fastest way to order clothing and accessories anywhere within Lagos' },
+      { name: 'format-detection', content: 'telephone=no' },
+      { property: 'og:site_name', content: "neasfashion"},
+      { hid: 'og:title', property: 'og:title', content: 'Neas Fashion - Buy the best clothes, shoes, bags, perfume and more right from the comfort of your phone.'},
+      { hid: 'og:description', property: 'og:description', content: 'The fastest way to order clothing and accessories anywhere within Lagos'},
+      { hid: 'og:image', property: 'og:image', content: ''},
+      { hid: 'og:url', property: 'og:url', content: 'https://www.neasfashion.com'},
+      { hid: 'twitter:title', name: 'twitter:title', content: 'Neas Fashion - Buy the best clothes, shoes, bags, perfume and more right from the comfort of your phone.'},
+      { hid: 'twitter:description', name: "twitter:description", content: "The fastest way to order clothing and accessories anywhere within Lagos"},
+      { hid: 'twitter:image', name:"twitter:image", content:""},
+      { hid: 'twitter:url', property: "twitter:url", content: "https://www.neasfashion.com"},
+      { hid: "twitter:card", name: "twitter:card", content: "summary"},
+      { name:"twitter:creator", content:"@joshytheprog"}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
