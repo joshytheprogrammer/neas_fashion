@@ -1,9 +1,9 @@
 <template>
   <div>
-    <grid-loader v-if="type == 'grid'" :color="styles.color" :size="styles.size"></grid-loader>
-    <clip-loader v-if="type == 'clip'" :color="styles.color" :size="styles.size"></clip-loader>
-    <bounce-loader v-if="type == 'bounce'" :color="styles.color" :size="styles.size"></bounce-loader>
-    <scale-loader v-if="type == 'scale'" :color="styles.color" :size="styles.size"></scale-loader>
+    <GridLoader v-if="type == 'grid'" :color="styles.color" :size="styles.size"></GridLoader>
+    <ClipLoader v-if="type == 'clip'" :color="styles.color" :size="styles.size"></ClipLoader>
+    <BounceLoader v-if="type == 'bounce'" :color="styles.color" :size="styles.size"></BounceLoader>
+    <ScaleLoader v-if="type == 'scale'" :color="styles.color" :size="styles.size"></ScaleLoader>
   </div>
 </template>
 
