@@ -37,23 +37,30 @@ export default {
 .Qdw {
   min-width: 90%;
   max-width: 90%;
+
   margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
   padding: 2rem 0;
 
   ._item {
-    background: $light;
+    padding: 1rem;
     border-radius: 10px;
+
+    margin: auto;
     width: fit-content;
+
     max-height: 640px;
-    color: $dark;
+
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     gap: 1rem;
 
-    // border: 1px solid $dark;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(2px);
 
     img {
       width: 100%;
@@ -73,6 +80,7 @@ export default {
         .n {
           font-size: 36px;
           font-weight: 500;
+          color: $dark;
           text-transform: capitalize;
         }
 
@@ -103,8 +111,6 @@ export default {
   }
 
   @media screen and (max-width: $medium) {
-    min-width: 80%;
-    max-width: 80%;
     padding: 1rem;
 
     ._item {
