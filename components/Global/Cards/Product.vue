@@ -4,7 +4,7 @@
       <img :src="item.image" :alt="'NeasFashion product - ' + item.name">
       <div class="_details">
         <NuxtLink :to="'/shop/'+item.slug" :aria-label="item.name" :title="item.name">{{item.name}}</NuxtLink>
-        <span class="price">{{item.price}}</span>
+        <span class="price">₦{{item.price}}</span>
       </div>
       <button>Order</button>
       <!-- {{item}} -->
@@ -40,6 +40,7 @@ export default {
       color: $dark;
 
       a {
+        padding: 0.5rem 0;
         display: block;
         color: inherit;
 
@@ -59,7 +60,17 @@ export default {
     }
 
     button {
+      display: block;
+      margin: auto;
+      border: none;
+      border-radius: $standard-r;
 
+      cursor: pointer;
+      margin-top: 0.5rem;
+      padding: 8px 12px;
+
+      background: $primary;
+      color: $light;
     }
   }
 }
