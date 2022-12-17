@@ -7,13 +7,18 @@
           <h1 class="n"> {{item.name}}. </h1>
           <p class="price" title="the price of the product">{{formatter(item.price)}}</p>
         </div>
+        <Info />
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import Info from "./Info.vue"
 export default {
+  components: {
+    Info
+  },
   props: ["item"],
   methods: {
     formatter(price) {

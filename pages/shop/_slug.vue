@@ -3,7 +3,6 @@
     <Loader v-if="$fetchState.pending" type="clip" />
     <NetworkError v-else-if="$fetchState.error || error" :message="error" />
     <Item :item="product" v-else />
-    <!-- {{product}} -->
   </div>
 </template>
 
