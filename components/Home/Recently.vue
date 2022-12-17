@@ -49,19 +49,23 @@ export default {
 .recently {
 
   .products {
-    margin: 2rem 3rem;
+    margin: 2rem 3rem 0 3rem;
 
     display: grid;
     gap: 1rem;
     justify-items: center;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+
+    @media screen and (max-width: $m-large) {
+      grid-template-columns: repeat(3,1fr);
+    }
 
     @media screen and (max-width: $medium) {
-      margin: 2rem 1rem;
+      margin: 2rem 1rem 0 1rem;
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $s-medium) {
       margin: 0 auto;
       width: 100%;
 
