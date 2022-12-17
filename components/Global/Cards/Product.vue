@@ -4,9 +4,9 @@
       <img :src="item.image" :alt="'NeasFashion product - ' + item.name">
       <div class="_details">
         <NuxtLink :to="'/shop/'+item.slug" :aria-label="item.name" :title="item.name">{{item.name}}</NuxtLink>
-        <span class="price">₦{{item.price}}</span>
+        <span class="price">{{formatter(item.price)}}</span>
       </div>
-      <button>Order</button>
+      <a class="btn" href="#" target="_blank">Order</a>
       <!-- {{item}} -->
     </div>
   </div>
@@ -14,7 +14,17 @@
 
 <script>
 export default {
-  props: ["item"]
+  props: ["item"],
+  methods: {
+    formatter(price) {
+      let currency = '₦'
+
+      var formatter = new Intl.NumberFormat('en-US');
+      price = currency + formatter.format(price)
+
+      return price
+    }
+  }
 }
 </script>
 
@@ -59,15 +69,22 @@ export default {
 
     }
 
-    button {
+    .btn {
       display: block;
+      width: fit-content;
+      text-align: center;
+
       margin: auto;
       border: none;
       border-radius: $standard-r;
 
       cursor: pointer;
+      text-decoration: none;
       margin-top: 0.5rem;
       padding: 8px 12px;
+
+      font-size: 14px;
+      font-weight: 400;
 
       background: $primary;
       color: $light;
