@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import {mapGetters, mapActions} from "Vuex"
+import {mapGetters, mapActions} from "vuex"
 export default {
   computed: {
     ...mapGetters({

@@ -9,7 +9,7 @@
 
 <script>
 import Nav from "../components/App/Nav.vue"
-import { mapActions } from "Vuex"
+import { mapActions } from "vuex"
 export default {
   components: {
     Nav
