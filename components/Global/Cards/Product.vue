@@ -90,5 +90,26 @@ export default {
       color: $light;
     }
   }
+
+  @media screen and (max-width: $s-medium) {
+    .s {
+      margin: auto;
+      width: 90%;
+
+      img {
+        height: 200px;
+      }
+
+      ._details {
+        a {
+          font-size: 14px;
+        }
+
+        span {
+          font-size: 16px;
+        }
+      }
+    }
+  }
 }
 </style>

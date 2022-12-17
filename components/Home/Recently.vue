@@ -61,7 +61,7 @@ export default {
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @media screen and (max-width: $s-medium) {
+    @media screen and (max-width: $small) {
       margin: 0 auto;
       width: 100%;
 
