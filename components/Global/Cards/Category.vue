@@ -29,6 +29,8 @@ export default {
 
     img {
       width: 100%;
+      height: 250px;
+      max-height: 100%;
       object-fit: contain;
       transition: 0.5s all ease-in-out;
     }

@@ -1,13 +1,15 @@
 <template>
+  <div class="product">
 
+  </div>
 </template>
 
 <script>
 export default {
-
+  props: ["item"]
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>
