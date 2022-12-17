@@ -50,7 +50,7 @@ export default {
         {
           hid: 'og:url',
           property: 'og:url',
-          content: 'https://www.neasfashion.com/shop/'+this.product.slug
+          content: 'https://neasfashion.demo.joshytheprogrammer.com/shop/'+this.product.slug
         },
         {
           hid: 'twitter:title',

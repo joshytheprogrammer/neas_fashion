@@ -6,7 +6,7 @@
         <NuxtLink :to="'/shop/'+item.slug" :aria-label="item.name" :title="item.name">{{item.name}}</NuxtLink>
         <span class="price">{{formatter(item.price)}}</span>
       </div>
-      <a class="btn" :href="'https://api.whatsapp.com/send?phone=2348081787841&text=I want to order product - '+item.id" target="_blank">Order</a>
+      <a class="btn" :href="'https://api.whatsapp.com/send?phone=2348081787841&text=I want to order product - https://neasfashion.demo.joshytheprogrammer.com/shop/'+item.slug" target="_blank">Order</a>
     </div>
   </div>
 </template>

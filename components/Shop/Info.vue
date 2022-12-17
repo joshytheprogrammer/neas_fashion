@@ -1,8 +1,7 @@
 <template>
   <div class="m" v-if="slug">
-    <p class="inform">Scan the code <b>OR</b> click the button below to order through Whatsapp.</p>
     <qrcode class="qr" :value="value" :size="size" level="H" foreground="#001021" />
-
+    <p class="inform">Scan the code <b>OR</b> click the button below to order through Whatsapp.</p>
     <a :href="value" target="_blank" class="btn">Whatsapp to Order</a>
   </div>
 </template>
@@ -14,9 +13,8 @@ export default {
   props: ["slug", "img"],
   data() {
     return {
-      value: '',
-      size: '250',
-      // loaded: false,
+      value: 'https://api.whatsapp.com/send?phone=2348081787841&text=I want to order product found at - https://neasfashion.demo.joshytheprogrammer.com/shop/'+this.slug,
+      size: '150',
     }
   },
   components: {
@@ -32,7 +30,10 @@ export default {
 
 <style lang="scss" scoped>
 .m {
-  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   .qr {
     margin: 1rem 0;
@@ -48,7 +49,7 @@ export default {
     width: fit-content;
 
     &.inform {
-      background: $primary;
+      background: $warning;
       color: $light;
     }
   }
@@ -58,7 +59,7 @@ export default {
     text-decoration: none;
     text-align: center;
     background: $success;
-    color: $primary;
+    color: $light;
     border: none;
     font-size: 16px;
     font-weight: 400;

@@ -14,11 +14,11 @@ export default {
       { hid: 'og:title', property: 'og:title', content: 'Neas Fashion - Buy the best clothes, shoes, bags, perfume and more right from the comfort of your phone.'},
       { hid: 'og:description', property: 'og:description', content: 'The fastest way to order clothing and accessories anywhere within Lagos'},
       { hid: 'og:image', property: 'og:image', content: ''},
-      { hid: 'og:url', property: 'og:url', content: 'https://www.neasfashion.com'},
+      { hid: 'og:url', property: 'og:url', content: 'https://neasfashion.demo.joshytheprogrammer.com/'},
       { hid: 'twitter:title', name: 'twitter:title', content: 'Neas Fashion - Buy the best clothes, shoes, bags, perfume and more right from the comfort of your phone.'},
       { hid: 'twitter:description', name: "twitter:description", content: "The fastest way to order clothing and accessories anywhere within Lagos"},
       { hid: 'twitter:image', name:"twitter:image", content:""},
-      { hid: 'twitter:url', property: "twitter:url", content: "https://www.neasfashion.com"},
+      { hid: 'twitter:url', property: "twitter:url", content: "https://neasfashion.demo.joshytheprogrammer.com/"},
       { hid: "twitter:card", name: "twitter:card", content: "summary"},
       { name:"twitter:creator", content:"@joshytheprog"}
     ],
