@@ -25,7 +25,7 @@ nav {
 
   user-select: none;
   background: $light;
-  max-width: 100%;
+  width: 100%;
   height: 72px;
 
   display: flex;
@@ -62,6 +62,8 @@ nav {
 
   @media screen and (max-width: $medium) {
     padding: 12px 14px;
+    width: 100%;
+
     .logo {
 
       font: {
@@ -69,10 +71,21 @@ nav {
         weight: 500;
       }
     }
+
+    .contact {
+      span {
+        font-size: 14px;
+
+        a {
+          font-size: 12px;
+        }
+      }
+    }
   }
 
   @media screen and (max-width: $small) {
     .logo {
+
       font: {
         size: 24px;
         weight: 500;
