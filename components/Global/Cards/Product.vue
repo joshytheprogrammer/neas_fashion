@@ -7,7 +7,6 @@
         <span class="price">{{formatter(item.price)}}</span>
       </div>
       <a class="btn" :href="'https://api.whatsapp.com/send?phone=2348081787841&text=I want to order product - '+item.id" target="_blank">Order</a>
-      <!-- {{item}} -->
     </div>
   </div>
 </template>
