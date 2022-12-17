@@ -62,7 +62,12 @@ export default {
     }
 
     @media screen and (max-width: $s-medium) {
-      display: block;
+      margin: 0 auto;
+      width: 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
 }
