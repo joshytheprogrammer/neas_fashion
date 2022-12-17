@@ -82,5 +82,11 @@ export default {
       margin: 0.5rem 0;
     }
   }
+
+  @media screen and (max-width: $medium) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 </style>
