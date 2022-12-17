@@ -1,8 +1,8 @@
 <template>
   <div class="m" v-if="slug">
     <qrcode class="qr" :value="value" :size="size" level="H" foreground="#001021" />
-    <p class="inform">Scan the code <b>OR</b> click the button below to order through Whatsapp.</p>
-    <a :href="value" target="_blank" class="btn">Whatsapp to Order</a>
+    <!-- <p class="inform">Scan the code <b>OR</b> click the button below to order through Whatsapp.</p> -->
+    <a :href="value" target="_blank" class="btn">Whatsapp</a>
   </div>
 </template>
 
@@ -31,9 +31,6 @@ export default {
 <style lang="scss" scoped>
 .m {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   .qr {
     margin: 1rem 0;
