@@ -3,6 +3,7 @@
     <Loader v-if="$fetchState.pending" type="clip" />
     <NetworkError v-else-if="$fetchState.error || error" :message="error" />
     <Item :item="product" v-else />
+    <!-- {{product}} -->
   </div>
 </template>
 
@@ -78,7 +79,17 @@ export default {
     this.$fetch()
   },
   async fetch() {
-
+    await this.$fire.firestore.collection('products')
+    .where("slug", "==", this.$route.params.slug)
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        this.product = {id: doc.id, image: doc.data().image, name: doc.data().name, price: doc.data().price, slug: doc.data().slug}
+      });
+    })
+    .catch((error) => {
+      this.error = "Error getting documents: " + error
+    });
   }
 }
 </script>
