@@ -25,7 +25,7 @@ export default {
     border-radius: $standard-r;
     padding: 1rem;
 
-    box-shadow: 0 1px 1px $primary;
+    // box-shadow: 0 1px 1px $primary;
 
     img {
       width: 100%;

@@ -94,7 +94,7 @@ export default {
   @media screen and (max-width: $s-medium) {
     .s {
       margin: auto;
-      width: 90%;
+      max-width: 90%;
 
       img {
         height: 200px;
