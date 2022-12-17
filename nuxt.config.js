@@ -13,11 +13,11 @@ export default {
       { property: 'og:site_name', content: "neasfashion"},
       { hid: 'og:title', property: 'og:title', content: 'Neas Fashion - Buy the best clothes, shoes, bags, perfume and more right from the comfort of your phone.'},
       { hid: 'og:description', property: 'og:description', content: 'The fastest way to order clothing and accessories anywhere within Lagos'},
-      { hid: 'og:image', property: 'og:image', content: ''},
+      { hid: 'og:image', property: 'og:image', content: 'https://firebasestorage.googleapis.com/v0/b/neas-fashion.appspot.com/o/NEAS%20Logo.png?alt=media&token=5d6f5791-5f73-4ff9-9018-a44b8474a4a2'},
       { hid: 'og:url', property: 'og:url', content: 'https://neasfashion.demo.joshytheprogrammer.com/'},
       { hid: 'twitter:title', name: 'twitter:title', content: 'Neas Fashion - Buy the best clothes, shoes, bags, perfume and more right from the comfort of your phone.'},
       { hid: 'twitter:description', name: "twitter:description", content: "The fastest way to order clothing and accessories anywhere within Lagos"},
-      { hid: 'twitter:image', name:"twitter:image", content:""},
+      { hid: 'twitter:image', name:"twitter:image", content:"https://firebasestorage.googleapis.com/v0/b/neas-fashion.appspot.com/o/NEAS%20Logo.png?alt=media&token=5d6f5791-5f73-4ff9-9018-a44b8474a4a2"},
       { hid: 'twitter:url', property: "twitter:url", content: "https://neasfashion.demo.joshytheprogrammer.com/"},
       { hid: "twitter:card", name: "twitter:card", content: "summary"},
       { name:"twitter:creator", content:"@joshytheprog"}
@@ -87,9 +87,19 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en'
+      name: 'Neas Fashion',
+      short_name: 'NF',
+      description: 'The fastest way to order clothing and accessories anywhere within Lagos',
+      lang: 'en',
+      background_color: '#7B0D1E',
+      theme_color: '#7B0D1E'
+    },
+    icon: {
+      fileName: 'icon.png',
+      sizes: [64, 120, 144, 12, 192, 384, 512]
     }
   },
+
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
