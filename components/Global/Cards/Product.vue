@@ -1,6 +1,14 @@
 <template>
   <div class="product">
-    
+    <div class="s">
+      <img :src="item.image" :alt="'NeasFashion product - ' + item.name">
+      <div class="_details">
+        <NuxtLink :to="'/shop/'+item.slug" :aria-label="item.name" :title="item.name">{{item.name}}</NuxtLink>
+        <span class="price">{{item.price}}</span>
+      </div>
+      <button>Order</button>
+      <!-- {{item}} -->
+    </div>
   </div>
 </template>
 
@@ -11,5 +19,48 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.product {
+  padding: 1rem 0;
 
+  .s {
+    width: 230px;
+    border-radius: $standard-r;
+
+    img {
+      width: 100%;
+      height: 250px;
+      max-height: 100%;
+      object-fit: contain;
+      transition: 0.5s all ease-in-out;
+    }
+
+    ._details {
+      text-align: center;
+      padding: 0.5rem;
+      color: $dark;
+
+      a {
+        display: block;
+        color: inherit;
+
+        font-size: 16px;
+        font-weight: 400;
+
+        text-decoration: none;
+      }
+
+      span {
+        display: block;
+
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+    }
+
+    button {
+
+    }
+  }
+}
 </style>

@@ -6,8 +6,8 @@
     <Loader v-if="$fetchState.pending" type="clip" />
     <NetworkError v-else-if="$fetchState.error || error" :message="error" />
     <div v-else class="products">
-      <!-- <Card v-for="item in recently" :key="item.id" :item="item" /> -->
-      <p v-for="item in recently" :key="item.id">{{item}}</p>
+      <Card v-for="item in recently" :key="item.id" :item="item" />
+      <!-- <p v-for="item in recently" :key="item.id">{{item}}</p> -->
     </div>
   </section>
 </template>
@@ -17,7 +17,7 @@ import Headers from "../Global/Headers.vue"
 import Loader from "../Global/Loader.vue"
 import NetworkError from "../Global/Error.vue"
 
-import Card from "../Global/Cards/Category.vue"
+import Card from "../Global/Cards/Product.vue"
 export default {
   components: {
     Headers,
