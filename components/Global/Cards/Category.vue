@@ -61,7 +61,7 @@ export default {
   @media screen and (max-width: $s-medium) {
     .s {
       img {
-        height: 200px;
+        height: 150px;
       }
     }
   }
