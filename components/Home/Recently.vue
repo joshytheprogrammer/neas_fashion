@@ -1,7 +1,7 @@
 <template>
   <section class="recently" id="recently">
     <Headers>
-      <template #title>Fresh Entries</template>
+      <template #title>New Arrivals</template>
     </Headers>
     <Loader v-if="$fetchState.pending" type="clip" />
     <NetworkError v-else-if="$fetchState.error || error" :message="error" />
