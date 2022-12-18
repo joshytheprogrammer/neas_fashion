@@ -148,7 +148,7 @@ export default {
 
     ._item {
       img {
-        max-height: 280px;
+        max-height: 200px;
         object-fit: contain;
       }
     }
