@@ -31,7 +31,12 @@ export default {
       error: '',
     }
   },
+  mounted() {
+    this.$fetch()
+  },
   async fetch() {
+    this.recently = []
+    
     try {
       await this.$fire.firestore.collection('products').limit(12).get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {

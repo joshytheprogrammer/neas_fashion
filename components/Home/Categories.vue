@@ -30,7 +30,12 @@ export default {
       error: ''
     }
   },
+  mounted() {
+    this.$fetch()
+  },
   async fetch() {
+    this.categories = []
+
     try {
       await this.$fire.firestore.collection('categories').get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
