@@ -3,9 +3,8 @@
     <Headers>
       <template #title>Trending Categories</template>
     </Headers>
-    <!-- <Loader v-if="$fetchState.pending" type="clip" /> -->
-    <Loader v-if="loading" type="clip" />
-    <NetworkError v-else-if="error" :message="error" />
+    <Loader v-if="$fetchState.pending" type="clip" />
+    <NetworkError v-else-if="$fetchState.error || error" :message="error" />
     <div v-else class="categories">
       <Card v-for="item in categories" :key="item.id" :item="item" />
     </div>
@@ -28,26 +27,25 @@ export default {
   data() {
     return {
       categories: [],
-      error: '',
-      loading: false
+      error: ''
     }
   },
-  async mounted() {
-    this.loading = true
+  mounted() {
+    // this.$fetch()
+  },
+  async fetch() {
+    // this.categories = []
+
     try {
       await this.$fire.firestore.collection('categories').get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           this.categories.push({id: doc.id, image: doc.data().image, name: doc.data().name})
         })
       })
-
-      this.loading = false
     } catch (error) {
       this.error = error.message
-
-      this.loading = false
     }
-  },
+  }
 }
 </script>
 
