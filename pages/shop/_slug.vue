@@ -74,10 +74,7 @@ export default {
       ]
     }
   },
-  mounted(){
-    this.$fetch()
-  },
-  async fetch() {
+  async mounted(){
     await this.$fire.firestore.collection('products')
     .where("slug", "==", this.$route.params.slug)
     .get()
@@ -89,7 +86,7 @@ export default {
     .catch((error) => {
       this.error = "Error getting documents: " + error
     });
-  }
+  },
 }
 </script>
 

@@ -30,12 +30,7 @@ export default {
       error: ''
     }
   },
-  mounted() {
-    this.$fetch()
-  },
-  async fetch() {
-    this.categories = []
-
+  async mounted() {
     try {
       await this.$fire.firestore.collection('categories').get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
@@ -45,7 +40,7 @@ export default {
     } catch (error) {
       this.error = error.message
     }
-  }
+  },
 }
 </script>
 
