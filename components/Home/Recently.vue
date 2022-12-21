@@ -3,11 +3,10 @@
     <Headers>
       <template #title>New Arrivals</template>
     </Headers>
-    <Loader v-if="$fetchState.pending" type="clip" />
-    <NetworkError v-else-if="$fetchState.error || error" :message="error" />
+    <Loader v-if="loading" type="clip" />
+    <NetworkError v-else-if="error" :message="error" />
     <div v-else class="products">
       <Card v-for="item in recently" :key="item.id" :item="item" />
-      <!-- <p v-for="item in recently" :key="item.id">{{item}}</p> -->
     </div>
   </section>
 </template>
@@ -29,17 +28,24 @@ export default {
     return {
       recently: [],
       error: '',
+      loading: false
     }
   },
   async mounted() {
+    this.loading = true
+
     try {
       await this.$fire.firestore.collection('products').limit(12).get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           this.recently.push({id: doc.id, image: doc.data().image, name: doc.data().name, price: doc.data().price, slug: doc.data().slug})
         })
       })
+
+      this.loading = false
     } catch (error) {
       this.error = error.message
+
+      this.loading = false
     }
   },
 }
