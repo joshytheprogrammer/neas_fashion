@@ -1,34 +1,20 @@
 <template>
-  <div>
-    <!-- <GridLoader v-if="type == 'grid'" :color="styles.color" :size="styles.size"></GridLoader>
-    <ClipLoader v-if="type == 'clip'" :color="styles.color" :size="styles.size"></ClipLoader>
-    <BounceLoader v-if="type == 'bounce'" :color="styles.color" :size="styles.size"></BounceLoader>
-    <ScaleLoader v-if="type == 'scale'" :color="styles.color" :size="styles.size"></ScaleLoader> -->
-  </div>
+  <div class="loader" v-if="loading"></div>
 </template>
 
-<script>
-// docs @ https://greyby.github.io/vue-spinner/
-// import GridLoader from 'vue-spinner/src/GridLoader.vue'
-// import ClipLoader from 'vue-spinner/src/ClipLoader.vue'
-// import BounceLoader from 'vue-spinner/src/BounceLoader.vue'
-// import ScaleLoader from 'vue-spinner/src/ScaleLoader.vue'
+<style lang="scss" scoped>
+.loader {
+  margin: 0.6rem auto;
+  border: 8px solid $light;
+  border-top: 8px solid $primary;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin .5s linear infinite;
+}
 
-// export default {
-//   components: {
-//     GridLoader,
-//     ClipLoader,
-//     BounceLoader,
-//     ScaleLoader,
-//   },
-//   props: ['type'],
-//   data() {
-//     return {
-//       styles: {
-//         color: '#7B0D1E',
-//         size: '64px'
-//       }
-//     }
-//   }
-// }
-</script>
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+</style>
