@@ -27,7 +27,6 @@
     "vue-template-compiler": "^2.7.10"
   },
   "engines" : {
-    "npm" : ">=8.0.0 <9.0.0",
     "node" : "16.18.1"
   }
 }
