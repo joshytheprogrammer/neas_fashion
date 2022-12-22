@@ -12,7 +12,6 @@
     "@nuxtjs/axios": "^5.13.6",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/firebase": "^8.2.2",
-    "@nuxtjs/ngrok": "^2.0.0",
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/style-resources": "^1.2.1",
     "@nuxtjs/vercel-builder": "^0.24.0",
@@ -26,7 +25,7 @@
     "vue-spinner": "^1.0.4",
     "vue-template-compiler": "^2.7.10"
   },
-  "engines" : {
-    "node" : "16.18.1"
+  "engines": {
+    "node": "16.18.1"
   }
 }
