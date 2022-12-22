@@ -1,6 +1,12 @@
 <template>
-  <div class="loader" v-if="loading"></div>
+  <div class="loader"></div>
 </template>
+
+<script>
+export default {
+
+}
+</script>
 
 <style lang="scss" scoped>
 .loader {
