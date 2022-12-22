@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Loader from "../../components/Global/Loader.vue"
+import Loader from "../../components/Global/Loading.vue"
 import NetworkError from "../../components/Global/Error.vue"
 import Item from "../../components/Shop/Item.vue"
 

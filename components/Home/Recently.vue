@@ -14,7 +14,7 @@
 
 <script>
 import Headers from "../Global/Headers.vue"
-import Loader from "../Global/Loader.vue"
+import Loader from "../Global/Loading.vue"
 import NetworkError from "../Global/Error.vue"
 
 import Card from "../Global/Cards/Product.vue"
