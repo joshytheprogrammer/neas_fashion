@@ -16,6 +16,7 @@
     "@nuxtjs/style-resources": "^1.2.1",
     "@nuxtjs/vercel-builder": "^0.24.0",
     "core-js": "^3.25.3",
+    "firebase": "^9.15.0",
     "nuxt": "^2.15.8",
     "qrcode.vue": "1.7",
     "sass": "^1.56.2",
