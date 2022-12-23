@@ -35,10 +35,8 @@ export default {
     // this.$fetch()
   },
   async fetch() {
-    // this.recently = []
-
     try {
-      await this.$fire.firestore.collection('products').get().then((querySnapshot) => {
+      await this.$fire.firestore.collection('products').limit(12).get().then((querySnapshot) => {
         querySnapshot.forEach((doc) => {
           this.recently.push({id: doc.id, image: doc.data().image, name: doc.data().name, price: doc.data().price, slug: doc.data().slug})
         })
