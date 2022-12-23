@@ -1,6 +1,6 @@
 <template>
   <div class="list">
-    <section v-for="item in categories" :key="item.id">
+    <section v-for="item in categories" :key="item.id" :id="item.id">
       <Headers>
         <template #title> Some {{item.name}} </template>
       </Headers>
