@@ -28,10 +28,12 @@ export default {
   },
   async fetch() {
     try {
-      await this.$fire.firestore.collection('products').get().then((querySnapshot) => {
-        // querySnapshot.forEach((doc) => {
-        //   this.products.push({id: doc.id, image: doc.data().image, name: doc.data().name, price: doc.data().price, slug: doc.data().slug})
-        // })
+      await this.$fire.firestore.collection('products')
+      .where("categories", "array-contains", this.id)
+      .get().then((querySnapshot) => {
+        querySnapshot.forEach((doc) => {
+          this.products.push({id: doc.id, image: doc.data().image, name: doc.data().name, price: doc.data().price, slug: doc.data().slug})
+        })
       })
     } catch (error) {
       this.error = error.message
@@ -41,5 +43,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.products {
+  margin: 2rem 3rem 0 3rem;
 
+  display: grid;
+  gap: 1rem;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media screen and (max-width: $m-large) {
+    grid-template-columns: repeat(3,1fr);
+  }
+
+  @media screen and (max-width: $medium) {
+    margin: 2rem 1rem 0 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (max-width: $medium) {
+    margin: 2rem 1rem 0 1rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  @media screen and (max-width: $small) {
+    margin: 0 auto;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 </style>
