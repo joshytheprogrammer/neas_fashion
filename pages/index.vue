@@ -3,6 +3,8 @@
     <Jumbotron />
     <Categories />
     <Recently />
+
+    
   </div>
 </template>
 
