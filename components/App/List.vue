@@ -4,16 +4,18 @@
       <Headers>
         <template #title> Some {{item.name}} </template>
       </Headers>
-      {{item.name}}
+      <CProducts :id="item.id" />
     </section>
   </div>
 </template>
 
 <script>
 import Headers from "../Global/Headers.vue"
+import CProducts from "../Home/Products.vue"
 export default {
   components: {
-    Headers
+    Headers,
+    CProducts
   },
   data() {
     return {
