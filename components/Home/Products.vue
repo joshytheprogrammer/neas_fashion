@@ -1,5 +1,5 @@
 <template>
-  <div class="products">
+  <div class="products-list">
     <Loader v-if="$fetchState.pending" type="clip" />
     <NetworkError v-else-if="$fetchState.error || error" :message="error" />
     <div v-else class="products">
@@ -43,36 +43,38 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.products {
-  margin: 2rem 3rem 0 3rem;
+.products-list {
+  .products {
+    margin: 2rem 3rem 0 3rem;
 
-  display: grid;
-  gap: 1rem;
-  justify-items: center;
-  grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    gap: 1rem;
+    justify-items: center;
+    grid-template-columns: repeat(4, 1fr);
 
-  @media screen and (max-width: $m-large) {
-    grid-template-columns: repeat(3,1fr);
-  }
+    @media screen and (max-width: $m-large) {
+      grid-template-columns: repeat(3,1fr);
+    }
 
-  @media screen and (max-width: $medium) {
-    margin: 2rem 1rem 0 1rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
+    @media screen and (max-width: $medium) {
+      margin: 2rem 1rem 0 1rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
 
-  @media screen and (max-width: $medium) {
-    margin: 2rem 1rem 0 1rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
+    @media screen and (max-width: $medium) {
+      margin: 2rem 1rem 0 1rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
 
 
-  @media screen and (max-width: $small) {
-    margin: 0 auto;
-    width: 100%;
+    @media screen and (max-width: $small) {
+      margin: 0 auto;
+      width: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 </style>
