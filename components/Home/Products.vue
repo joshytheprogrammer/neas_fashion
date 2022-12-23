@@ -3,19 +3,43 @@
     <Loader v-if="$fetchState.pending" type="clip" />
     <NetworkError v-else-if="$fetchState.error || error" :message="error" />
     <div v-else class="products">
-      <Card v-for="item in recently" :key="item.id" :item="item" />
-      <!-- <p v-for="item in recently" :key="item.id">{{item}}</p> -->
+      <Card v-for="item in products" :key="item.id" :item="item" />
     </div>
-    {{id}}
   </div>
 </template>
 
 <script>
+import Loader from "../Global/Loading.vue"
+import NetworkError from "../Global/Error.vue"
+
+import Card from "../Global/Cards/Product.vue"
 export default {
-  props: ["id"]
+  props: ["id"],
+  components: {
+    Loader,
+    NetworkError,
+    Card,
+  },
+  data() {
+    return {
+      products: [],
+      error: ''
+    }
+  },
+  async fetch() {
+    try {
+      await this.$fire.firestore.collection('products').get().then((querySnapshot) => {
+        // querySnapshot.forEach((doc) => {
+        //   this.products.push({id: doc.id, image: doc.data().image, name: doc.data().name, price: doc.data().price, slug: doc.data().slug})
+        // })
+      })
+    } catch (error) {
+      this.error = error.message
+    }
+  }
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
 
 </style>
