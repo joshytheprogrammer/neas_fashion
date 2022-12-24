@@ -7,7 +7,7 @@
     </h2>
     <div class="contact">
       <span>Need help?</span>
-      <span><a href="tel:+2348023456789">08023456789</a></span>
+      <span><a href="tel:+2347080569116">07080569116</a></span>
     </div>
   </nav>
 </template>
