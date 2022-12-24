@@ -13,7 +13,7 @@ export default {
   props: ["slug", "img"],
   data() {
     return {
-      value: 'https://api.whatsapp.com/send?phone=2348081787841&text=I want to order product found at - https://neasfashion.demo.joshytheprogrammer.com/shop/'+this.slug,
+      value: 'https://api.whatsapp.com/send?phone=2347080569116&text=I want to order product found at - https://neasfashion.demo.joshytheprogrammer.com/shop/'+this.slug,
       size: '150',
     }
   },
