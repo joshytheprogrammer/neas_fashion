@@ -100,8 +100,15 @@ export default {
       }
 
       ._details {
+
         a {
+          display: block;
           font-size: 14px;
+          white-space: pre-line;
+          overflow: hidden;
+          height: 39px;
+          text-overflow: ellipsis;
+          padding: 0;
         }
 
         span {
