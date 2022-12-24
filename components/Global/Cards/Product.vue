@@ -110,5 +110,15 @@ export default {
       }
     }
   }
+
+  @media screen and (max-width: $small) {
+    .s {
+      width: fit-content;
+
+      img {
+        height: 180px;
+      }
+    }
+  }
 }
 </style>
