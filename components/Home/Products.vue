@@ -60,15 +60,6 @@ export default {
       margin: 2rem 1rem 0 1rem;
       grid-template-columns: repeat(2, 1fr);
     }
-
-    @media screen and (max-width: $small) {
-      margin: 0 auto;
-      width: 100%;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
   }
 }
 </style>

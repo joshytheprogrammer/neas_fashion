@@ -116,6 +116,7 @@ export default {
       width: fit-content;
 
       img {
+        max-width: 200px;
         height: 180px;
       }
     }
