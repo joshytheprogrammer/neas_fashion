@@ -11,11 +11,11 @@ export default {
 <style lang="scss" scoped>
 .loader {
   margin: 2rem auto;
+  width: 60px;
+  height: 60px;
   border: 8px solid $light;
   border-top: 5px solid $primary;
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
   animation: spin .5s linear infinite;
 }
 

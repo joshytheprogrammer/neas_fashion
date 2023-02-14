@@ -1,6 +1,5 @@
 <template>
   <div class="product">
-    <!-- <Loader /> -->
     <Loader v-if="$fetchState.pending"/>
     <NetworkError v-else-if="$fetchState.error || error" :message="error" />
     <Item :item="product" v-else />
